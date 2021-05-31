@@ -8,10 +8,11 @@
 }
 .h4{
   margin-top: 6rem;
-  color: rgb(90, 154, 214);
+  color: green;
+  font-weight: 600;
   text-decoration-line: underline;
-  text-decoration-style: wavy;
-  text-decoration-color: rgb(5, 83, 128);
+  text-decoration-style: dotted;
+  text-decoration-color:black;
   
 }
 .navbar{
