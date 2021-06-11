@@ -6,10 +6,9 @@ import About from "./Component/About";
 import Home from "./Component/Home";
 import ContactUs from "./Component/ContactUs";
 import Navbar from "./Component/Navbar";
-import { Switch , Route, } from "react-router";
 import Welcome from "./Component/Welcome";
-// import "./App.css";
-
+import Ser1 from "./Component/Ser1";
+import { Switch , Route, Redirect, } from "react-router";
 
 const App = ()=>{
   
@@ -17,11 +16,20 @@ const App = ()=>{
         <>
         <Navbar/>
         <Switch>
-        <Route exact path ="/" component={Welcome} />
-          <Route exact path ="/home" component={Home} />         
-          <Route exact path ="/service" component= {Service}/>
+        <Route exact path ="/fashionview" component={Welcome} />
+          <Route exact path ="/home" component={Home} /> 
+          <Route exact path="/service" component={Service} />      
+          <Route  path ="/service/traditional" component= {Ser1}/>
+          <Route  path ="/service/gown" component= {Ser1}/>
+          <Route  path ="/service/cool" component= {Ser1}/>
+          <Route  path ="/service/shorts" component= {Ser1}/>
+          <Route  path ="/service/funkey" component= {Ser1}/>
+          <Route  path ="/service/onePiece" component= {Ser1}/>
+          <Route  path ="/service/midi" component= {Ser1}/>
+          <Route  path ="/service/western" component= {Ser1}/>
           <Route exact path ="/contactus" component={ContactUs}/>
           <Route exact path ="/about" component={About}/>
+          <Redirect path="/welcome" component={Welcome}/>
         </Switch>
        </>
        
